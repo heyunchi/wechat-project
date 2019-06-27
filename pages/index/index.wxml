@@ -1,0 +1,22 @@
+<view class="top-info">
+    <view>北京</view>
+    <text>2月16日</text>
+    <text>周四</text>
+    <view>
+        <text>19:52</text>
+        <text>  更新</text>
+    </view>
+</view>
+<view class="weather-info">
+    <text>5°C</text>
+    <text>   晴</text>
+</view>
+<view class="weather-detail" wx:for="{{array}}">
+    <view class="weather-detail-top">
+        <text>{{item.target}}:</text>
+        <text> {{item.status}}</text>
+    </view>
+    <view>
+        {{item.message}}
+    </view>
+</view>

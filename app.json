@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/city/city"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "几度风雨",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/tarBar/manage-click.png",
+        "selectedIconPath": "/images/tarBar/manage.png",
+        "text": "天气信息"
+      },
+      {
+        "pagePath": "pages/city/city",
+        "iconPath": "images/tarBar/zuhu_click.png",
+        "selectedIconPath": "images/tarBar/zuhu.png",
+        "text": "选择城市"
+      }
+    ],
+    "backgroundColor": "#F6F6F6",
+    "color": "#ddd",
+    "selectedColor": "#D8BFD8"
+  },
+  "sitemapLocation": "sitemap.json"
+}
