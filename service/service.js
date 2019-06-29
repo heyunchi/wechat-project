@@ -106,7 +106,6 @@ function loadWeather(cityName,callback) {
                 }
             }
             // console.log(wData);
-            //返回数据
             callback && callback(wData)
 
         },
