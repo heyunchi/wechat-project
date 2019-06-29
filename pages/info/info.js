@@ -5,70 +5,64 @@ Page({
     /**
      * 页面的初始数据
      */
-    data: {
-      
-    },
 
     /**
      * 生命周期函数--监听页面加载
      */
-    onLoad: function(options) {
-        let that = this
-        // 参数：城市信息  回调函数
-        service.getWeather(null, function (wd) {
-            //回调函数的this被谁调用是不确定的
-            // 将数据保存到data里,this要指定为page
+    onLoad: function (options) {
+        var that = this
+        //获取上一个页面发送的请求参数
+        service.getWeather(options.cityName, function (wd) {
             that.setData({ wd: wd })
         })
-        this.data.wd;
     },
 
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
-    onReady: function() {
+    onReady: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function() {
+    onShow: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面隐藏
      */
-    onHide: function() {
+    onHide: function () {
 
     },
 
     /**
      * 生命周期函数--监听页面卸载
      */
-    onUnload: function() {
+    onUnload: function () {
 
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
-    onPullDownRefresh: function() {
+    onPullDownRefresh: function () {
 
     },
 
     /**
      * 页面上拉触底事件的处理函数
      */
-    onReachBottom: function() {
+    onReachBottom: function () {
 
     },
 
     /**
      * 用户点击右上角分享
      */
-    onShareAppMessage: function() {
+    onShareAppMessage: function () {
 
     }
 })

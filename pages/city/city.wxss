@@ -1,0 +1,15 @@
+
+.top-search{
+    padding: 20rpx;
+}
+.top-search>input {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    padding: 15rpx 20rpx;
+}
+.top-search>button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-weight: bolder;
+    margin: 20rpx 0;
+}

@@ -1,22 +1,77 @@
-<view class="top-info">
-    <view>北京</view>
-    <text>2月16日</text>
-    <text>周四</text>
+<view wx:if="{{wd.status ==='ok' }}">
+    <view class="top-info">
+    <view>{{wd.city}}</view>
+    <text>{{wd.date}}</text>
     <view>
-        <text>19:52</text>
+        <text>{{wd.upTime}}</text>
         <text>  更新</text>
     </view>
 </view>
 <view class="weather-info">
-    <text>5°C</text>
-    <text>   晴</text>
+    <text>{{wd.temp}}°C</text>
+    <text>   {{wd.desc}}</text>
 </view>
-<view class="weather-detail" wx:for="{{array}}">
+<scroll-view scroll-y="true" class="weather-detail" >
     <view class="weather-detail-top">
-        <text>{{item.target}}:</text>
-        <text> {{item.status}}</text>
+        <view>
+            <text>空气质量： </text>
+            <text>{{wd.suggestion.air.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.air.txt}}</text>
     </view>
-    <view>
-        {{item.message}}
+    <view class="weather-detail-top">
+        <view>
+            <text>舒适指数： </text>
+            <text>{{wd.suggestion.comf.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.comf.txt}}</text>
     </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>洗车指数： </text>
+            <text>{{wd.suggestion.cw.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.cw.txt}}</text>
+    </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>穿衣指数： </text>
+            <text>{{wd.suggestion.drsg.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.drsg.txt}}</text>
+    </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>感冒指数： </text>
+            <text>{{wd.suggestion.flu.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.flu.txt}}</text>
+    </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>运动指数： </text>
+            <text>{{wd.suggestion.sport.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.sport.txt}}</text>
+    </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>旅游指数： </text>
+            <text>{{wd.suggestion.trav.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.trav.txt}}</text>
+    </view>
+    <view class="weather-detail-top">
+        <view>
+            <text>紫外线指数： </text>
+            <text>{{wd.suggestion.uv.brf}}</text>
+        </view>
+        <text> {{wd.suggestion.uv.txt}}</text>
+    </view>
+</scroll-view>
+</view>
+
+
+<view wx:if="{{wd.status ==='error' }}" class="error-tip">
+    别看了，失败了，回去吧！
 </view>

@@ -1,1 +1,4 @@
-<view>选择城市</view>
+<view class="top-search">
+    <input type="text" placeholder="请输入城市名" focus="true"                                     bindinput="getCityName"></input>
+    <button bindtap="goToIndex">查询</button>
+</view>
