@@ -106,6 +106,7 @@ function loadWeather(cityName,callback) {
                 }
             }
             // console.log(wData);
+            // 回调地狱
             callback && callback(wData)
 
         },
